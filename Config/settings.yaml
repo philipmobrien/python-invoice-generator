@@ -1,0 +1,10 @@
+# Global settings — paths only.
+# base_dir is the root of your invoicing folder.
+# Use ~ for home directory; the script expands it automatically.
+
+base_dir: ~/path/to/your/Invoices
+
+# Subdirectory names within base_dir (defaults shown; change if needed)
+config_subdir:    Config
+clients_subdir:   Clients
+generated_subdir: Generated

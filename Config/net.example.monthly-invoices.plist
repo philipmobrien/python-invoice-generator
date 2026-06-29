@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <key>Label</key>
+    <string>net.example.monthly-invoices</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <!-- Full path to run_monthly_invoices.py in your Config/ folder -->
+        <string>/path/to/your/Invoices/Config/run_monthly_invoices.py</string>
+    </array>
+
+    <!-- Run at 09:00 on the 1st of each month -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Day</key>
+        <integer>1</integer>
+        <key>Hour</key>
+        <integer>9</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/yourusername/Library/Logs/monthly-invoices.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/yourusername/Library/Logs/monthly-invoices-error.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+</dict>
+</plist>

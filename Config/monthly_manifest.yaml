@@ -1,0 +1,22 @@
+# Monthly invoice manifest
+# Lists client YAML files to process on each automated run.
+# Comment out a client to suspend without deleting their config.
+#
+# qty applies positionally to scaleable line items in the client YAML.
+# A single value applies to all scaleable items.
+# A list applies each value to the corresponding scaleable item in order.
+# Fewer values than scaleable items: remainder default to 1.
+# Omitting qty: all scaleable items default to 1.
+
+clients:
+  - config: sample_client.yaml
+    qty: 1
+  # Single scaleable item, two sites:
+  # - config: another_client.yaml
+  #   qty: 2
+  # Multiple scaleable items, different quantities per item:
+  # - config: multi_item_client.yaml
+  #   qty:
+  #     - 2
+  #     - 1
+  #     - 3

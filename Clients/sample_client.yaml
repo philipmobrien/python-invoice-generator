@@ -1,0 +1,55 @@
+# Sample client config — copy and rename for each client.
+# All files referenced (logo, log) are looked up in the Config/ directory.
+
+# ── Entity (trading name / brand sending the invoice) ─────────────────────────
+entity:
+  name: Your Trading Name
+  logo_file: your_logo.png         # place logo file in Config/ e.g. logoipsum-426.png
+
+# ── Invoice sequence ──────────────────────────────────────────────────────────
+log_file: sample_invoice_log.txt   # one log per client; seed with INV0000 before first run — generates INV0001
+default_qty: 1                     # default quantity; overridden by manifest qty or -qt flag
+                                   # can be a list for multiple scaleable items: [2, 1, 3]
+auto_send: false                   # reserved for future automatic email sending
+
+# ── Payment ───────────────────────────────────────────────────────────────────
+payment_days: 0                    # 0 = immediate; 30 = net-30 etc.
+terms: Immediate                   # free-text terms printed on invoice
+re_line: Services rendered         # Re. line on the invoice
+
+# ── Your details ──────────────────────────────────────────────────────────────
+your_details:
+  phone: "+44 7000 000000"
+  email: you@example.com
+  address:
+    - 1 Example Street
+    - Your Town
+    - AB1 2CD
+
+# ── Client details ────────────────────────────────────────────────────────────
+client:
+  name: Client Contact Name
+  company: Client Company Ltd
+  address:
+    - 1 Client Street
+    - Client Town
+    - CD3 4EF
+
+# ── Bank details ──────────────────────────────────────────────────────────────
+bank:
+  account_name: Your Account Name
+  sort_code: 00-00-00        # or BIC/SWIFT for international payments
+  account: "00000000"        # or IBAN
+  bank: Your Bank
+
+# ── Line items ────────────────────────────────────────────────────────────────
+# scaleable: true  — quantity multiplied by -qt / manifest qty (e.g. per-site charges)
+# scaleable: false — always qty 1 regardless of -qt (e.g. fixed annual fees)
+
+line_items:
+  - description: Your service description here
+    unit_price: 0.00
+    scaleable: true
+  # - description: Fixed annual charge
+  #   unit_price: 0.00
+  #   scaleable: false

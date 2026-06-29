@@ -1,0 +1,5 @@
+# INV invoice log — one entry per generated invoice
+# Format: INVOICE_NUMBER  DATE
+# Script reads the last line to determine the next number in sequence.
+# Add historical invoice numbers below if you want a complete record.
+INV0000  2025-10-23
