@@ -1,9 +1,5 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
-### Mac-specific ###
-/*.DS_Store
-
-
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -176,7 +172,9 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
-# End of https://www.toptal.com/developers/gitignore/api/python
+### Mac-specific ###
+*.DS_Store
 Archive/.DS_Store
+Clients/.DS_Store
 Config/.DS_Store
 Generated/.DS_Store
