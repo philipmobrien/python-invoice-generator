@@ -4,7 +4,7 @@
 # ── Entity (trading name / brand sending the invoice) ─────────────────────────
 entity:
   name: Your Trading Name
-  logo_file: your_logo.png         # place logo file in Config/ e.g. logoipsum-426.png
+  logo_file: your_logo.png         # place logo file in Config/
 
 # ── Invoice sequence ──────────────────────────────────────────────────────────
 log_file: sample_invoice_log.txt   # one log per client; seed with INV0000 before first run — generates INV0001
@@ -16,6 +16,9 @@ auto_send: false                   # reserved for future automatic email sending
 payment_days: 0                    # 0 = immediate; 30 = net-30 etc.
 terms: Immediate                   # free-text terms printed on invoice
 re_line: Services rendered         # Re. line on the invoice
+vat_registered: false              # set true and add vat_number when VAT registered
+# vat_number: GB000000000         # uncomment and add when registered
+# vat_rate: 0.20                  # VAT rate; defaults to 0.20 (20%) if omitted
 
 # ── Your details ──────────────────────────────────────────────────────────────
 your_details:
@@ -50,6 +53,6 @@ line_items:
   - description: Your service description here
     unit_price: 0.00
     scaleable: true
-  # - description: Fixed annual charge
+  # - description: One-off, single unit service or description
   #   unit_price: 0.00
   #   scaleable: false
